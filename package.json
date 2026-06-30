@@ -1,0 +1,33 @@
+{
+  "name": "templateai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TemplateAI - Premium AI Template Platform (frontend scaffold)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\""
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "browser-image-compression": "^1.0.17",
+    "firebase": "^12.15.0",
+    "framer-motion": "^10.12.19",
+    "lucide-react": "^0.268.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-easy-crop": "^6.0.2",
+    "react-router-dom": "^6.14.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.2.0",
+    "electron": "^26.2.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.4.7",
+    "vite": "^5.0.0",
+    "wait-on": "^7.0.1"
+  }
+}

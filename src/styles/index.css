@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg-dark: #06060a;
+  --bg-darker: #040406;
+  --panel: rgba(255,255,255,0.03);
+  --glass-border: rgba(255,255,255,0.06);
+  --accent-1: linear-gradient(90deg,#7c4dff,#5b8cff);
+  --accent-2: linear-gradient(90deg,#a855f7,#7c3aed);
+}
+
+html,body,#root{height:100%}
+body{
+  @apply text-white antialiased;
+  background: radial-gradient(800px 500px at 10% 10%, rgba(124,77,255,0.08), transparent 20%), radial-gradient(700px 400px at 90% 80%, rgba(91,140,255,0.04), transparent 10%), linear-gradient(180deg,var(--bg-dark),var(--bg-darker));
+  font-family: Inter, Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing:antialiased;
+}
+
+.glass{
+  background: var(--panel);
+  backdrop-filter: blur(10px) saturate(120%);
+  border: 1px solid var(--glass-border);
+}
+
+.container{
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.container-before{
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.btn-primary{
+  background: linear-gradient(90deg,#7c3aed,#5b8cff);
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: .75rem;
+  box-shadow: 0 8px 24px rgba(92,43,255,0.12);
+}
+
+.card-float{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.muted { color: #9aa3b2 }
+
+.accent-text {
+  background: linear-gradient(90deg,#9b7cff,#6da3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.floating-thumbs img{ border-radius: .5rem; box-shadow: 0 8px 20px rgba(0,0,0,0.6) }
+
+.glass-strong{ background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(12px); }
+
+.rounded-xl-3{ border-radius: 1.5rem }
+
+/* Custom Scrollbar for horizontal scrolling containers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
