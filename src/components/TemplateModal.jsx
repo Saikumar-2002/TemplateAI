@@ -89,6 +89,7 @@ export default function TemplateModal({ template, open, onClose }) {
         templateImageSrc: template.preview,
         template,
         selectedOptions,
+        activePrompt, // Added this to pass prompt to the engine
         onProgress: (p, label) => {
           setProgress(p)
           setProgressLabel(label)

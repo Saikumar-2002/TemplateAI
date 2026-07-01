@@ -35,7 +35,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'Avengers Poster'. Atmosphere: Epic hero movie poster style with dramatic lighting and bold typography. Visual tags: Avengers, Hero, Blockbuster. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'Avengers Poster'. Atmosphere: Epic hero movie poster style with dramatic lighting and bold typography. Visual tags: Avengers, Hero, Blockbuster. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 2,
@@ -71,7 +71,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'John Wick Noir'. Atmosphere: High-contrast noir action poster inspired by classic thrillers. Visual tags: Noir, Action, Hero. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'John Wick Noir'. Atmosphere: High-contrast noir action poster inspired by classic thrillers. Visual tags: Noir, Action, Hero. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 3,
@@ -108,7 +108,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'Cyberpunk Hero'. Atmosphere: Neon cyberpunk poster with futuristic cityscapes and bold typography. Visual tags: Cyberpunk, Neon, Sci-Fi. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'Cyberpunk Hero'. Atmosphere: Neon cyberpunk poster with futuristic cityscapes and bold typography. Visual tags: Cyberpunk, Neon, Sci-Fi. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 4,
@@ -144,7 +144,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'Anime Hero Portrait'. Atmosphere: Vibrant anime-styled poster with dramatic pose and energetic composition. Visual tags: Anime, Stylized, Hero. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'Anime Hero Portrait'. Atmosphere: Vibrant anime-styled poster with dramatic pose and energetic composition. Visual tags: Anime, Stylized, Hero. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 5,
@@ -189,7 +189,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a professional executive in the style of 'Professional Headshot'. Atmosphere: Clean professional headshot ideal for LinkedIn and resumes. Visual tags: Headshot, Professional, Corporate. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a professional executive wearing a well-tailored business suit, in the style of 'Professional Headshot'. The subject is dressed in formal corporate attire (such as a suit and tie, or professional blazer). Atmosphere: Clean professional headshot ideal for LinkedIn and resumes, with a modern office or neutral studio background. Visual tags: Headshot, Professional, Corporate, Suit, Formal attire. Shot on 35mm lens, cinematic studio lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 6,
@@ -225,7 +225,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a professional executive in the style of 'CEO Portrait'. Atmosphere: Authority-focused portrait with cinematic lighting for executives. Visual tags: Portrait, Executive, Formal. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a powerful CEO wearing premium, high-end business attire (such as an expensive tailored suit or designer blazer) in the style of 'CEO Portrait'. The subject exudes authority and confidence. Atmosphere: Authority-focused portrait with dramatic cinematic lighting, set against a luxurious corporate office or boardroom background. Visual tags: Portrait, Executive, Formal, CEO, Suit. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 7,
@@ -260,7 +260,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a professional executive in the style of 'Resume Photo'. Atmosphere: Neutral resume-friendly portrait with natural lighting. Visual tags: Resume, Professional. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a candidate wearing neat business casual or formal attire, in the style of 'Resume Photo'. The subject looks approachable and highly employable. Atmosphere: Neutral resume-friendly portrait with soft natural lighting and a plain, non-distracting background. Visual tags: Resume, Professional, Business Casual. Shot on 35mm lens, soft studio lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 8,
@@ -297,7 +297,7 @@
       }
     ],
     "requiredPhotos": 2,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride and handsome groom in the style of 'Royal Wedding'. Atmosphere: Luxurious royal wedding aesthetic with ornate details and golden tones. Visual tags: Wedding, Royal, Elegant. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride wearing an elegant wedding dress and a handsome groom wearing a tailored tuxedo in the style of 'Royal Wedding'. Atmosphere: Luxurious royal wedding aesthetic with ornate details and golden tones. Visual tags: Wedding, Royal, Elegant. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 9,
@@ -333,7 +333,7 @@
       }
     ],
     "requiredPhotos": 2,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride and handsome groom in the style of 'Beach Wedding'. Atmosphere: Soft dreamy beach wedding composition with warm sunset tones. Visual tags: Wedding, Beach, Romantic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride wearing an elegant wedding dress and a handsome groom wearing a tailored tuxedo in the style of 'Beach Wedding'. Atmosphere: Soft dreamy beach wedding composition with warm sunset tones. Visual tags: Wedding, Beach, Romantic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 10,
@@ -370,7 +370,7 @@
       }
     ],
     "requiredPhotos": 2,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride and handsome groom in the style of 'Luxury Wedding'. Atmosphere: Glamorous wedding composition with cinematic color grading and luxe details. Visual tags: Luxury, Wedding, Glam. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride wearing an elegant wedding dress and a handsome groom wearing a tailored tuxedo in the style of 'Luxury Wedding'. Atmosphere: Glamorous wedding composition with cinematic color grading and luxe details. Visual tags: Luxury, Wedding, Glam. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 11,
@@ -406,7 +406,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor in the style of 'PUBG Battle'. Atmosphere: Intense gaming poster reminiscent of battle royale aesthetics. Visual tags: Gaming, PUBG, Action. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor wearing professional team jerseys or tactical gaming gear in the style of 'PUBG Battle'. Atmosphere: Intense gaming poster reminiscent of battle royale aesthetics. Visual tags: Gaming, PUBG, Action. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 12,
@@ -442,7 +442,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor in the style of 'GTA Cityscape'. Atmosphere: Stylized urban gaming poster with bold typography and high-contrast visuals. Visual tags: GTA, City, Retro. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor wearing professional team jerseys or tactical gaming gear in the style of 'GTA Cityscape'. Atmosphere: Stylized urban gaming poster with bold typography and high-contrast visuals. Visual tags: GTA, City, Retro. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 13,
@@ -478,7 +478,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor in the style of 'Valorant Vibe'. Atmosphere: Esports poster aesthetic with character-focused composition. Visual tags: Valorant, Esports, Stylized. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor wearing professional team jerseys or tactical gaming gear in the style of 'Valorant Vibe'. Atmosphere: Esports poster aesthetic with character-focused composition. Visual tags: Valorant, Esports, Stylized. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 14,
@@ -515,7 +515,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor in the style of 'Cyberpunk Arena'. Atmosphere: Futuristic gaming scene with neon lighting and dystopian cityscapes. Visual tags: Cyberpunk, Arena, Futuristic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor wearing professional team jerseys or tactical gaming gear in the style of 'Cyberpunk Arena'. Atmosphere: Futuristic gaming scene with neon lighting and dystopian cityscapes. Visual tags: Cyberpunk, Arena, Futuristic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 15,
@@ -551,7 +551,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch in the style of 'Royal Portrait'. Atmosphere: Regal portrait with ornate framing and rich textures. Visual tags: Royal, Portrait, Lux. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch wearing elaborate royal garments, a lavish crown, and regal jewelry in the style of 'Royal Portrait'. Atmosphere: Regal portrait with ornate framing and rich textures. Visual tags: Royal, Portrait, Lux. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 16,
@@ -589,7 +589,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Mystic Fantasy'. Atmosphere: High-fantasy portrait with magical effects, mist, and glowing elements. Visual tags: Fantasy, Magic, Epic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a mythical character wearing intricate fantasy armor or magical robes in the style of 'Mystic Fantasy'. Atmosphere: High-fantasy portrait with magical effects, mist, and glowing elements. Visual tags: Fantasy, Magic, Epic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 17,
@@ -626,7 +626,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler in the style of 'Paris Travel'. Atmosphere: Stylized travel shot of Paris with iconic landmarks and warm tones. Visual tags: Paris, Travel, City. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler wearing stylish vacation or exploration clothing in the style of 'Paris Travel'. Atmosphere: Stylized travel shot of Paris with iconic landmarks and warm tones. Visual tags: Paris, Travel, City. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 18,
@@ -662,7 +662,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler in the style of 'Dubai Luxury'. Atmosphere: Opulent travel imagery featuring modern architectures and luxury styling. Visual tags: Dubai, Luxury, Travel. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler wearing stylish vacation or exploration clothing in the style of 'Dubai Luxury'. Atmosphere: Opulent travel imagery featuring modern architectures and luxury styling. Visual tags: Dubai, Luxury, Travel. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 19,
@@ -698,7 +698,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler in the style of 'Japan Streets'. Atmosphere: Cinematic travel portrait set in bustling Japanese streets. Visual tags: Japan, City, Culture. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler wearing stylish vacation or exploration clothing in the style of 'Japan Streets'. Atmosphere: Cinematic travel portrait set in bustling Japanese streets. Visual tags: Japan, City, Culture. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 20,
@@ -733,7 +733,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler in the style of 'Maldives Paradise'. Atmosphere: Tropical travel imagery with bright colors and calm composition. Visual tags: Maldives, Beach, Relax. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler wearing stylish vacation or exploration clothing in the style of 'Maldives Paradise'. Atmosphere: Tropical travel imagery with bright colors and calm composition. Visual tags: Maldives, Beach, Relax. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 21,
@@ -769,7 +769,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Luxury Instagram'. Atmosphere: High-fashion Instagram-ready image with luxe color grading. Visual tags: Fashion, Luxury, Instagram. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Luxury Instagram'. Atmosphere: High-fashion Instagram-ready image with luxe color grading. Visual tags: Fashion, Luxury, Instagram. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 22,
@@ -805,7 +805,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Cafe Aesthetic'. Atmosphere: Warm cafe vibes with soft bokeh and earthy tones. Visual tags: Cafe, Lifestyle. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Cafe Aesthetic'. Atmosphere: Warm cafe vibes with soft bokeh and earthy tones. Visual tags: Cafe, Lifestyle. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 23,
@@ -840,7 +840,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Fashion Editorial'. Atmosphere: Bold editorial look for influencers and fashion creators. Visual tags: Fashion, Editorial. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Fashion Editorial'. Atmosphere: Bold editorial look for influencers and fashion creators. Visual tags: Fashion, Editorial. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 24,
@@ -868,7 +868,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Lifestyle Shot'. Atmosphere: Natural lifestyle imagery with soft tones for social sharing. Visual tags: Lifestyle, Influencer. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Lifestyle Shot'. Atmosphere: Natural lifestyle imagery with soft tones for social sharing. Visual tags: Lifestyle, Influencer. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 25,
@@ -897,7 +897,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Neon Pulse Portrait'. Atmosphere: Fresh neon-lit portrait with electric hues and modern design cues. Visual tags: New, Featured, Neon. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Neon Pulse Portrait'. Atmosphere: Fresh neon-lit portrait with electric hues and modern design cues. Visual tags: New, Featured, Neon. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 26,
@@ -925,7 +925,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Gradient Dream'. Atmosphere: Modern minimal template with subtle gradients and clean aesthetics. Visual tags: New, Trend, Gradient. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Gradient Dream'. Atmosphere: Modern minimal template with subtle gradients and clean aesthetics. Visual tags: New, Trend, Gradient. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 27,
@@ -953,7 +953,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'Indie Film Poster'. Atmosphere: Indie film poster aesthetic with grainy texture and muted palette. Visual tags: Indie, Poster, Artistic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'Indie Film Poster'. Atmosphere: Indie film poster aesthetic with grainy texture and muted palette. Visual tags: Indie, Poster, Artistic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 28,
@@ -981,7 +981,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a professional executive in the style of 'Business Leader'. Atmosphere: Focused business leader headshot with clean background. Visual tags: Headshot, Business, Leadership. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an inspiring business leader wearing sharp, sophisticated corporate attire, in the style of 'Business Leader'. The subject looks visionary and confident. Atmosphere: Focused business leader headshot with a clean, modern corporate background. Visual tags: Headshot, Business, Leadership, Suit, Corporate. Shot on 35mm lens, high-end commercial lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 29,
@@ -1009,7 +1009,7 @@
       }
     ],
     "requiredPhotos": 2,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride and handsome groom in the style of 'Rustic Wedding'. Atmosphere: Rustic wedding vibes with warm film tones and natural settings. Visual tags: Rustic, Wedding, Vintage. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride wearing an elegant wedding dress and a handsome groom wearing a tailored tuxedo in the style of 'Rustic Wedding'. Atmosphere: Rustic wedding vibes with warm film tones and natural settings. Visual tags: Rustic, Wedding, Vintage. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 30,
@@ -1037,7 +1037,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor in the style of 'Retro Arcade'. Atmosphere: Retro gaming poster with bold neon type and pixel nostalgia. Visual tags: Retro, Gaming, Arcade. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor wearing professional team jerseys or tactical gaming gear in the style of 'Retro Arcade'. Atmosphere: Retro gaming poster with bold neon type and pixel nostalgia. Visual tags: Retro, Gaming, Arcade. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 31,
@@ -1065,7 +1065,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch in the style of 'Royal Sovereign'. Atmosphere: Regal sovereign portrait with soft golden glow and ornate details. Visual tags: Portrait, Royal, Majestic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch wearing elaborate royal garments, a lavish crown, and regal jewelry in the style of 'Royal Sovereign'. Atmosphere: Regal sovereign portrait with soft golden glow and ornate details. Visual tags: Portrait, Royal, Majestic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 32,
@@ -1093,7 +1093,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Epic Dragon Lord'. Atmosphere: Epic fantasy dragon lord portrait with fiery effects and smoky atmosphere. Visual tags: Epic, Magic, Dragon. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a mythical character wearing intricate fantasy armor or magical robes in the style of 'Epic Dragon Lord'. Atmosphere: Epic fantasy dragon lord portrait with fiery effects and smoky atmosphere. Visual tags: Epic, Magic, Dragon. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 33,
@@ -1121,7 +1121,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler in the style of 'Urban Explorer'. Atmosphere: City travel poster with cinematic color and urban energy. Visual tags: Urban, City, Explorer. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler wearing stylish vacation or exploration clothing in the style of 'Urban Explorer'. Atmosphere: City travel poster with cinematic color and urban energy. Visual tags: Urban, City, Explorer. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 34,
@@ -1149,7 +1149,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Cozy Vibes'. Atmosphere: Cozy lifestyle shot for social feeds with warm golden tones. Visual tags: Lifestyle, Cozy, Warm. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Cozy Vibes'. Atmosphere: Cozy lifestyle shot for social feeds with warm golden tones. Visual tags: Lifestyle, Cozy, Warm. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 35,
@@ -1177,7 +1177,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'Thriller Shadows'. Atmosphere: Intense thriller poster with deep shadows and high contrast styling. Visual tags: Thriller, Suspense, Dark. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'Thriller Shadows'. Atmosphere: Intense thriller poster with deep shadows and high contrast styling. Visual tags: Thriller, Suspense, Dark. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 36,
@@ -1206,7 +1206,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a professional executive in the style of 'Corporate Clean'. Atmosphere: Neutral corporate headshot with clean white background. Visual tags: Business, Corporate, Clean. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a professional wearing immaculate, classic business attire (dark suit or blazer with a crisp shirt) in the style of 'Corporate Clean'. Atmosphere: Neutral corporate headshot with a pure, clean white background. Visual tags: Business, Corporate, Clean, Suit. Shot on 35mm lens, bright and even studio lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 37,
@@ -1234,7 +1234,7 @@
       }
     ],
     "requiredPhotos": 2,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride and handsome groom in the style of 'Elegant Garden Wedding'. Atmosphere: Elegant garden wedding portrait with soft natural lighting. Visual tags: Elegant, Garden, Romantic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride wearing an elegant wedding dress and a handsome groom wearing a tailored tuxedo in the style of 'Elegant Garden Wedding'. Atmosphere: Elegant garden wedding portrait with soft natural lighting. Visual tags: Elegant, Garden, Romantic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 38,
@@ -1263,7 +1263,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor in the style of 'Tactical FPS Banner'. Atmosphere: Action-packed tactical FPS inspired poster with intense atmosphere. Visual tags: FPS, Tactical, Action. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor wearing professional team jerseys or tactical gaming gear in the style of 'Tactical FPS Banner'. Atmosphere: Action-packed tactical FPS inspired poster with intense atmosphere. Visual tags: FPS, Tactical, Action. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 39,
@@ -1291,7 +1291,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch in the style of 'Royal Ceremony'. Atmosphere: Grand ceremonial royal aesthetic with rich velvet tones. Visual tags: Ceremonial, Grand, Royal. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch wearing elaborate royal garments, a lavish crown, and regal jewelry in the style of 'Royal Ceremony'. Atmosphere: Grand ceremonial royal aesthetic with rich velvet tones. Visual tags: Ceremonial, Grand, Royal. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 40,
@@ -1320,7 +1320,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Mythic Phoenix'. Atmosphere: Mythic tale portrait with fiery phoenix effects and dramatic skies. Visual tags: Mythic, Phoenix, Fire. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a mythical character wearing intricate fantasy armor or magical robes in the style of 'Mythic Phoenix'. Atmosphere: Mythic tale portrait with fiery phoenix effects and dramatic skies. Visual tags: Mythic, Phoenix, Fire. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 41,
@@ -1348,7 +1348,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler in the style of 'Mountain Vista'. Atmosphere: Scenic mountain travel composition with wide panoramic vistas. Visual tags: Landscape, Mountain, Scenic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler wearing stylish vacation or exploration clothing in the style of 'Mountain Vista'. Atmosphere: Scenic mountain travel composition with wide panoramic vistas. Visual tags: Landscape, Mountain, Scenic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 42,
@@ -1377,7 +1377,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Influencer Glow'. Atmosphere: Influencer-ready polished look with golden glow for feeds. Visual tags: Influencer, Glow, Social. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Influencer Glow'. Atmosphere: Influencer-ready polished look with golden glow for feeds. Visual tags: Influencer, Glow, Social. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 43,
@@ -1405,7 +1405,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'Dramatic Cinema'. Atmosphere: Intimate drama poster with moody lighting and cinematic depth. Visual tags: Drama, Cinema, Moody. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'Dramatic Cinema'. Atmosphere: Intimate drama poster with moody lighting and cinematic depth. Visual tags: Drama, Cinema, Moody. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 44,
@@ -1434,7 +1434,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a professional executive in the style of 'Startup Founder'. Atmosphere: Crisp profile portrait optimized for tech startup founders. Visual tags: Profile, Startup, Tech. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a visionary tech entrepreneur wearing smart-casual clothing (like a premium t-shirt under a stylish blazer, or a sleek turtleneck) in the style of 'Startup Founder'. The subject looks innovative and approachable. Atmosphere: Crisp profile portrait optimized for tech startup founders, with a modern co-working space or blurred glass office background. Visual tags: Profile, Startup, Tech, Smart-Casual. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 45,
@@ -1462,7 +1462,7 @@
       }
     ],
     "requiredPhotos": 2,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride and handsome groom in the style of 'Classic Romance Wedding'. Atmosphere: Classic wedding portrait with soft film grain and timeless beauty. Visual tags: Classic, Romantic, Timeless. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride wearing an elegant wedding dress and a handsome groom wearing a tailored tuxedo in the style of 'Classic Romance Wedding'. Atmosphere: Classic wedding portrait with soft film grain and timeless beauty. Visual tags: Classic, Romantic, Timeless. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 46,
@@ -1491,7 +1491,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor in the style of 'MOBA Legend'. Atmosphere: MOBA legend poster with character focus and dynamic neon colors. Visual tags: MOBA, Legend, Esports. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor wearing professional team jerseys or tactical gaming gear in the style of 'MOBA Legend'. Atmosphere: MOBA legend poster with character focus and dynamic neon colors. Visual tags: MOBA, Legend, Esports. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 47,
@@ -1519,7 +1519,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch in the style of 'Golden Throne'. Atmosphere: Opulent golden throne royal portrait with luxurious backdrop. Visual tags: Portrait, Throne, Gold. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch wearing elaborate royal garments, a lavish crown, and regal jewelry in the style of 'Golden Throne'. Atmosphere: Opulent golden throne royal portrait with luxurious backdrop. Visual tags: Portrait, Throne, Gold. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 48,
@@ -1547,7 +1547,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Dreamweaver'. Atmosphere: Dreamlike fantasy portrait with soft ethereal glows and floating particles. Visual tags: Dreamy, Ethereal, Magic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a mythical character wearing intricate fantasy armor or magical robes in the style of 'Dreamweaver'. Atmosphere: Dreamlike fantasy portrait with soft ethereal glows and floating particles. Visual tags: Dreamy, Ethereal, Magic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 49,
@@ -1575,7 +1575,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler in the style of 'Sahara Adventure'. Atmosphere: Adventure travel look with vivid desert colors and epic horizons. Visual tags: Adventure, Desert, Safari. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler wearing stylish vacation or exploration clothing in the style of 'Sahara Adventure'. Atmosphere: Adventure travel look with vivid desert colors and epic horizons. Visual tags: Adventure, Desert, Safari. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 50,
@@ -1603,7 +1603,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Minimalist Feed'. Atmosphere: Minimalist feed-ready image with clean lines and soft tones. Visual tags: Minimal, Clean, Aesthetic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Minimalist Feed'. Atmosphere: Minimalist feed-ready image with clean lines and soft tones. Visual tags: Minimal, Clean, Aesthetic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 51,
@@ -1631,7 +1631,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'Action Explosion'. Atmosphere: Bold action poster with explosive motion blur and kinetic energy. Visual tags: Action, Explosion, Bold. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'Action Explosion'. Atmosphere: Bold action poster with explosive motion blur and kinetic energy. Visual tags: Action, Explosion, Bold. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 52,
@@ -1689,7 +1689,7 @@
       }
     ],
     "requiredPhotos": 2,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride and handsome groom in the style of 'Candid Moments'. Atmosphere: Candid wedding shot with organic composition and natural emotion. Visual tags: Candid, Moments, Natural. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride wearing an elegant wedding dress and a handsome groom wearing a tailored tuxedo in the style of 'Candid Moments'. Atmosphere: Candid wedding shot with organic composition and natural emotion. Visual tags: Candid, Moments, Natural. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 54,
@@ -1717,7 +1717,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor in the style of 'Esports Arena'. Atmosphere: Arena-style esports poster with dramatic crowd lights and energy. Visual tags: Arena, Esports, Lights. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor wearing professional team jerseys or tactical gaming gear in the style of 'Esports Arena'. Atmosphere: Arena-style esports poster with dramatic crowd lights and energy. Visual tags: Arena, Esports, Lights. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 55,
@@ -1746,7 +1746,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch in the style of 'Velvet Dynasty'. Atmosphere: Opulent royal dynasty portrait with velvet textures and rich backdrop. Visual tags: Opulent, Velvet, Dynasty. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch wearing elaborate royal garments, a lavish crown, and regal jewelry in the style of 'Velvet Dynasty'. Atmosphere: Opulent royal dynasty portrait with velvet textures and rich backdrop. Visual tags: Opulent, Velvet, Dynasty. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 56,
@@ -1774,7 +1774,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Enchanted Realm'. Atmosphere: Expansive enchanted fantasy landscape with dramatic glowing skies. Visual tags: Epic, Landscape, Enchanted. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a mythical character wearing intricate fantasy armor or magical robes in the style of 'Enchanted Realm'. Atmosphere: Expansive enchanted fantasy landscape with dramatic glowing skies. Visual tags: Epic, Landscape, Enchanted. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 57,
@@ -1802,7 +1802,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler in the style of 'Island Getaway'. Atmosphere: Island getaway composition with bright turquoise waters and paradise vibes. Visual tags: Island, Tropical, Ocean. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler wearing stylish vacation or exploration clothing in the style of 'Island Getaway'. Atmosphere: Island getaway composition with bright turquoise waters and paradise vibes. Visual tags: Island, Tropical, Ocean. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 58,
@@ -1830,7 +1830,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Brunch Flatlay'. Atmosphere: Styled brunch flatlay shot with shallow depth and aesthetic plating. Visual tags: Food, Cafe, Flatlay. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Brunch Flatlay'. Atmosphere: Styled brunch flatlay shot with shallow depth and aesthetic plating. Visual tags: Food, Cafe, Flatlay. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 59,
@@ -1858,7 +1858,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'Sci-Fi Commander'. Atmosphere: Sci-fi commander poster with futuristic HUD effects and space atmosphere. Visual tags: Sci-Fi, Commander, Future. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'Sci-Fi Commander'. Atmosphere: Sci-fi commander poster with futuristic HUD effects and space atmosphere. Visual tags: Sci-Fi, Commander, Future. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 60,
@@ -1914,7 +1914,7 @@
       }
     ],
     "requiredPhotos": 2,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride and handsome groom in the style of 'Magazine Wedding'. Atmosphere: Editorial magazine-style wedding portrait with cinematic tones. Visual tags: Editorial, Magazine, Glamorous. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride wearing an elegant wedding dress and a handsome groom wearing a tailored tuxedo in the style of 'Magazine Wedding'. Atmosphere: Editorial magazine-style wedding portrait with cinematic tones. Visual tags: Editorial, Magazine, Glamorous. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 62,
@@ -1943,7 +1943,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor in the style of 'Stealth Ops'. Atmosphere: Stealth ops gaming poster with muted palette and covert atmosphere. Visual tags: Stealth, Ops, Tactical. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor wearing professional team jerseys or tactical gaming gear in the style of 'Stealth Ops'. Atmosphere: Stealth ops gaming poster with muted palette and covert atmosphere. Visual tags: Stealth, Ops, Tactical. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 63,
@@ -1972,7 +1972,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch in the style of 'Imperial Guard'. Atmosphere: Imperial guard royal portrait with dramatic sash and ceremonial apparel. Visual tags: Portrait, Imperial, Guard. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch wearing elaborate royal garments, a lavish crown, and regal jewelry in the style of 'Imperial Guard'. Atmosphere: Imperial guard royal portrait with dramatic sash and ceremonial apparel. Visual tags: Portrait, Imperial, Guard. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 64,
@@ -2000,7 +2000,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Ethereal Spirit'. Atmosphere: Ethereal spirit fantasy look with soft luminous glows and floating particles. Visual tags: Ethereal, Spirit, Glow. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a mythical character wearing intricate fantasy armor or magical robes in the style of 'Ethereal Spirit'. Atmosphere: Ethereal spirit fantasy look with soft luminous glows and floating particles. Visual tags: Ethereal, Spirit, Glow. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 65,
@@ -2028,7 +2028,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler in the style of 'Nightlife Explorer'. Atmosphere: Night city travel composition with vibrant neon lights and urban energy. Visual tags: City, Nightlife, Neon. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler wearing stylish vacation or exploration clothing in the style of 'Nightlife Explorer'. Atmosphere: Night city travel composition with vibrant neon lights and urban energy. Visual tags: City, Nightlife, Neon. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 66,
@@ -2057,7 +2057,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Beauty Glow'. Atmosphere: Beauty glow shot with soft retouching and luminous skin for social media. Visual tags: Beauty, Glow, Portrait. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Beauty Glow'. Atmosphere: Beauty glow shot with soft retouching and luminous skin for social media. Visual tags: Beauty, Glow, Portrait. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 67,
@@ -2086,7 +2086,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'Arthouse Film'. Atmosphere: Arthouse film poster with minimalist composition and rich contrast. Visual tags: Indie, Arthouse, Artistic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'Arthouse Film'. Atmosphere: Arthouse film poster with minimalist composition and rich contrast. Visual tags: Indie, Arthouse, Artistic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 68,
@@ -2144,7 +2144,7 @@
       }
     ],
     "requiredPhotos": 2,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride and handsome groom in the style of 'Boho Wedding'. Atmosphere: Bohemian outdoor wedding with wildflower vibes and free-spirit energy. Visual tags: Bohemian, Free-spirit, Outdoor. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a beautiful bride wearing an elegant wedding dress and a handsome groom wearing a tailored tuxedo in the style of 'Boho Wedding'. Atmosphere: Bohemian outdoor wedding with wildflower vibes and free-spirit energy. Visual tags: Bohemian, Free-spirit, Outdoor. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 70,
@@ -2173,7 +2173,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor in the style of 'Battle Royale Champion'. Atmosphere: Battle royale champion poster with victory pose and stadium lights. Visual tags: Champion, Victory, Battle. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor wearing professional team jerseys or tactical gaming gear in the style of 'Battle Royale Champion'. Atmosphere: Battle royale champion poster with victory pose and stadium lights. Visual tags: Champion, Victory, Battle. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 71,
@@ -2202,7 +2202,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch in the style of 'Renaissance King'. Atmosphere: Renaissance-style royal portrait with classical oil painting aesthetics. Visual tags: Renaissance, King, Classic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a majestic monarch wearing elaborate royal garments, a lavish crown, and regal jewelry in the style of 'Renaissance King'. Atmosphere: Renaissance-style royal portrait with classical oil painting aesthetics. Visual tags: Renaissance, King, Classic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 72,
@@ -2231,7 +2231,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Dark Sorcerer'. Atmosphere: Dark sorcerer fantasy portrait with arcane energy and mystical atmosphere. Visual tags: Dark, Sorcerer, Arcane. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a mythical character wearing intricate fantasy armor or magical robes in the style of 'Dark Sorcerer'. Atmosphere: Dark sorcerer fantasy portrait with arcane energy and mystical atmosphere. Visual tags: Dark, Sorcerer, Arcane. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 73,
@@ -2260,7 +2260,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler in the style of 'Northern Lights'. Atmosphere: Northern lights travel portrait with aurora borealis and Nordic landscapes. Visual tags: Aurora, Northern, Nordic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler wearing stylish vacation or exploration clothing in the style of 'Northern Lights'. Atmosphere: Northern lights travel portrait with aurora borealis and Nordic landscapes. Visual tags: Aurora, Northern, Nordic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 74,
@@ -2289,7 +2289,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Street Style'. Atmosphere: Urban street style shot with bold colors and city backdrop. Visual tags: Street, Urban, Fashion. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Street Style'. Atmosphere: Urban street style shot with bold colors and city backdrop. Visual tags: Street, Urban, Fashion. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 75,
@@ -2318,7 +2318,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'Horror Poster'. Atmosphere: Chilling horror movie poster with dark shadows and eerie atmosphere. Visual tags: Horror, Dark, Scary. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'Horror Poster'. Atmosphere: Chilling horror movie poster with dark shadows and eerie atmosphere. Visual tags: Horror, Dark, Scary. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 76,
@@ -2347,7 +2347,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Warrior Queen'. Atmosphere: Powerful warrior queen fantasy portrait with battle-ready armor and fierce gaze. Visual tags: Warrior, Queen, Powerful. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a mythical character wearing intricate fantasy armor or magical robes in the style of 'Warrior Queen'. Atmosphere: Powerful warrior queen fantasy portrait with battle-ready armor and fierce gaze. Visual tags: Warrior, Queen, Powerful. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 77,
@@ -2376,7 +2376,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler in the style of 'Venice Gondola'. Atmosphere: Romantic Venice gondola travel shot with golden hour lighting. Visual tags: Venice, Italy, Romantic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of an adventurous traveler wearing stylish vacation or exploration clothing in the style of 'Venice Gondola'. Atmosphere: Romantic Venice gondola travel shot with golden hour lighting. Visual tags: Venice, Italy, Romantic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 78,
@@ -2405,7 +2405,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor in the style of 'Pixel Art Avatar'. Atmosphere: Pixel art gaming avatar with retro 8-bit charm and modern twist. Visual tags: Pixel, Retro, Avatar. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a fierce esports competitor wearing professional team jerseys or tactical gaming gear in the style of 'Pixel Art Avatar'. Atmosphere: Pixel art gaming avatar with retro 8-bit charm and modern twist. Visual tags: Pixel, Retro, Avatar. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 79,
@@ -2434,7 +2434,7 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a person in the style of 'Sunset Bloom'. Atmosphere: Golden sunset bloom portrait with warm light rays and dreamy atmosphere. Visual tags: Sunset, Golden, Warm. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a highly fashionable person wearing trendy, stylish clothing appropriate for an influencer in the style of 'Sunset Bloom'. Atmosphere: Golden sunset bloom portrait with warm light rays and dreamy atmosphere. Visual tags: Sunset, Golden, Warm. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   },
   {
     "id": 80,
@@ -2463,6 +2463,6 @@
       }
     ],
     "requiredPhotos": 1,
-    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic hero in the style of 'Space Odyssey'. Atmosphere: Epic space odyssey poster with cosmic nebula backdrop and astronaut vibes. Visual tags: Space, Odyssey, Epic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
+    "basePrompt": "Highly detailed, photorealistic masterpiece of a cinematic character dressed in full movie-accurate costume and attire in the style of 'Space Odyssey'. Atmosphere: Epic space odyssey poster with cosmic nebula backdrop and astronaut vibes. Visual tags: Space, Odyssey, Epic. Shot on 35mm lens, cinematic lighting, 8k resolution, highly detailed faces, intricate textures."
   }
 ]

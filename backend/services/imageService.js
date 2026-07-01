@@ -5,9 +5,10 @@ async function generateImage({prompt, image}){
   if(process.env.IMAGE_PROVIDER === 'openai' && process.env.OPENAI_API_KEY){
     // Use OpenAI Images API (generations)
     const body = {
+      model: 'dall-e-2',
       prompt,
       n: 1,
-      size: process.env.IMAGE_SIZE || '1024x1024'
+      size: '512x512'
     }
 
     const res = await fetch('https://api.openai.com/v1/images/generations',{

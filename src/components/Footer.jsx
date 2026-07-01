@@ -14,10 +14,10 @@ export default function Footer() {
               The fastest way to hop on social media trends. One click AI transformations directly in your browser.
             </p>
             <div className="flex gap-4 mt-6">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-violet-600 transition text-lg">𝕏</a>
+              <a href="https://x.com/SaiKumar891714" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-violet-600 transition text-lg">𝕏</a>
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-pink-600 transition text-lg">IG</a>
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-600 transition text-lg">FB</a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition text-lg">in</a>
+              <a href="https://www.linkedin.com/in/saikumar1002" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition text-lg">in</a>
             </div>
           </div>
 

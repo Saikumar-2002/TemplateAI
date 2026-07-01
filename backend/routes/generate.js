@@ -1,36 +1,47 @@
 const express = require('express')
 const router = express.Router()
+const imageService = require('../services/imageService')
 const promptBuilder = require('../services/promptBuilder')
 const llmService = require('../services/llmService')
-const imageService = require('../services/imageService')
 const path = require('path')
 const fs = require('fs')
 
 // POST /api/generate
-// body: { templateId, options: { ... }, image?: dataUrl }
-router.post('/', async (req,res)=>{
-  try{
-    const { templateId, options, image } = req.body
-    // load templates
-    const dataPath = path.join(__dirname, '..', '..', 'src', 'data', 'templates.json')
-    const templates = JSON.parse(fs.readFileSync(dataPath, 'utf8'))
-    const template = templates.find(t => String(t.id) === String(templateId))
-    if(!template) return res.status(404).json({error:'Template not found'})
+// body: { prompt } — direct prompt from the frontend
+// OR:  { templateId, options, image } — legacy form
+router.post('/', async (req, res) => {
+  try {
+    const { prompt, templateId, options, image } = req.body
 
-    // Build hidden prompt
-    const basePrompt = promptBuilder.build(template, options)
+    let finalPrompt = prompt
 
-    // Optionally refine via LLM (mock or real)
-    const refinedPrompt = await llmService.refinePrompt(basePrompt, {template, options})
+    // If no direct prompt provided, build it from templateId + options
+    if (!finalPrompt && templateId) {
+      const dataPath = path.join(__dirname, '..', '..', 'src', 'data', 'templates.json')
+      const templates = JSON.parse(fs.readFileSync(dataPath, 'utf8'))
+      const template = templates.find(t => String(t.id) === String(templateId))
+      if (!template) return res.status(404).json({ error: 'Template not found' })
 
-    // Generate image via image service (mock or real). Pass original uploaded image if any
-    const result = await imageService.generateImage({prompt: refinedPrompt, image})
+      finalPrompt = promptBuilder.build(template, options || {})
+    }
 
-    // Save metadata (in future we'd persist to DB). For now return result.
-    res.json({ok:true, prompt: '<<hidden>>', result})
-  }catch(err){
-    console.error(err)
-    res.status(500).json({error: 'Generation failed', details: err.message})
+    if (!finalPrompt) {
+      return res.status(400).json({ error: 'No prompt provided' })
+    }
+
+    // Optionally refine via LLM (mock by default unless LLM_MODE is set)
+    const refinedPrompt = await llmService.refinePrompt(finalPrompt, {})
+
+    // DALL-E 2 has a 1000 character prompt limit
+    const truncatedPrompt = refinedPrompt.substring(0, 1000)
+
+    // Generate image via OpenAI
+    const result = await imageService.generateImage({ prompt: truncatedPrompt, image })
+
+    res.json({ ok: true, prompt: '<<hidden>>', result })
+  } catch (err) {
+    console.error('Generate error:', err)
+    res.status(500).json({ error: 'Generation failed', details: err.message })
   }
 })
 
