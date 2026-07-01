@@ -6,6 +6,7 @@ import { downloadImage, generateFilename } from '../utils/downloadUtils'
 import { useApp } from '../context/AppContext'
 import { useAuth } from '../context/AuthContext'
 import ImageEditor from './ImageEditor'
+import UpgradeModal from './UpgradeModal'
 
 const STEPS = ['preview', 'upload', 'processing', 'result']
 
@@ -28,9 +29,12 @@ export default function TemplateModal({ template, open, onClose }) {
   const [activePrompt, setActivePrompt] = useState('')
 
   const fileInputRef = useRef(null)
-  const { addHistory, toggleFavorite, isFavorite } = useApp()
+  const { addHistory, toggleFavorite, isFavorite, userPlan, downloadsCount, incrementDownloads } = useApp()
   const { currentUser } = useAuth()
   const navigate = useNavigate()
+  
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false)
+  const [upgradeFeature, setUpgradeFeature] = useState('Download Limit Reached')
 
   useEffect(() => {
     if (template) {
@@ -93,10 +97,26 @@ export default function TemplateModal({ template, open, onClose }) {
     }
   }, [userPhotoUrl, template, selectedOptions, addHistory])
 
-  const handleDownload = useCallback(() => {
+  const handleStandardDownload = useCallback(() => {
     if (!resultUrl) return
+    if (userPlan === 'Starter' && downloadsCount >= 2) {
+      setUpgradeFeature('Download Limit Reached')
+      setShowUpgradeModal(true)
+      return
+    }
+    if (userPlan === 'Starter') incrementDownloads()
     downloadImage(resultUrl, generateFilename(template.title))
-  }, [resultUrl, template])
+  }, [resultUrl, template, userPlan, downloadsCount, incrementDownloads])
+
+  const handleHDDownload = useCallback(() => {
+    if (!resultUrl) return
+    if (userPlan === 'Starter') {
+      setUpgradeFeature('High-Quality Downloads')
+      setShowUpgradeModal(true)
+      return
+    }
+    downloadImage(resultUrl, generateFilename(template.title + '_HD'))
+  }, [resultUrl, template, userPlan])
 
   const resetModal = useCallback(() => {
     setStep('preview')
@@ -450,18 +470,31 @@ export default function TemplateModal({ template, open, onClose }) {
                   >
                     New Template
                   </button>
-                  <button
-                    onClick={handleDownload}
-                    className="flex-1 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-lg shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
-                  >
-                    <span>⬇</span> Download Ultra HD
-                  </button>
+                  <div className="flex flex-col gap-3 flex-1">
+                    <button
+                      onClick={handleStandardDownload}
+                      className="py-4 rounded-xl border border-white/20 hover:bg-white/10 text-white font-bold text-lg transition-all active:scale-[0.98]"
+                    >
+                      <span>⬇</span> Download Standard
+                    </button>
+                    <button
+                      onClick={handleHDDownload}
+                      className="py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-lg shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+                    >
+                      <span>⬇</span> Download HD {userPlan === 'Starter' && '🔒'}
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             )}
           </div>
         </motion.div>
       </div>
+      <UpgradeModal 
+        isOpen={showUpgradeModal} 
+        onClose={() => setShowUpgradeModal(false)} 
+        feature={upgradeFeature}
+      />
     </AnimatePresence>
   )
 }

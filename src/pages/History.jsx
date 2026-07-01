@@ -2,9 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useApp } from '../context/AppContext'
 import { downloadImage, generateFilename } from '../utils/downloadUtils'
+import UpgradeModal from '../components/UpgradeModal'
+import { useState } from 'react'
 
 export default function History() {
-  const { history, clearHistory, removeHistoryItem } = useApp()
+  const { history, clearHistory, removeHistoryItem, userPlan, downloadsCount, incrementDownloads } = useApp()
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false)
 
   return (
     <div className="pt-24 pb-20 container max-w-6xl">
@@ -35,7 +38,14 @@ export default function History() {
                 <img src={item.resultDataUrl} alt={item.templateTitle} className="w-full h-56 object-cover" />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm gap-2">
                    <button 
-                     onClick={() => downloadImage(item.resultDataUrl, generateFilename(item.templateTitle))}
+                     onClick={() => {
+                       if (userPlan === 'Starter' && downloadsCount >= 2) {
+                         setShowUpgradeModal(true)
+                         return
+                       }
+                       if (userPlan === 'Starter') incrementDownloads()
+                       downloadImage(item.resultDataUrl, generateFilename(item.templateTitle))
+                     }}
                      className="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center hover:scale-110 transition"
                      title="Download"
                    >
@@ -73,6 +83,12 @@ export default function History() {
           </Link>
         </div>
       )}
+
+      <UpgradeModal 
+        isOpen={showUpgradeModal} 
+        onClose={() => setShowUpgradeModal(false)} 
+        feature="Download Limit Reached"
+      />
     </div>
   )
 }

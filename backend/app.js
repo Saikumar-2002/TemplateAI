@@ -27,4 +27,8 @@ app.get('/api/templates', (req,res)=>{
 const generateRoute = require('./routes/generate')
 app.use('/api/generate', generateRoute)
 
+// Payment endpoint for Razorpay
+const paymentRoute = require('./routes/payment')
+app.use('/api/payment', paymentRoute)
+
 module.exports = app

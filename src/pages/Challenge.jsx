@@ -5,6 +5,7 @@ import { compositeImage, PROCESSING_STAGES } from '../services/compositeEngine'
 import { downloadImage, generateFilename } from '../utils/downloadUtils'
 import { useApp } from '../context/AppContext'
 import { motion } from 'framer-motion'
+import UpgradeModal from '../components/UpgradeModal'
 
 // ─── Daily Challenge Data (auto-rotates every day) ───
 const CHALLENGES = [
@@ -92,7 +93,7 @@ export default function Challenge() {
   const challenge = getTodayChallenge()
   const { currentUser } = useAuth()
   const navigate = useNavigate()
-  const { addHistory } = useApp()
+  const { addHistory, userPlan, downloadsCount, incrementDownloads } = useApp()
 
   const [userPhotoUrl, setUserPhotoUrl] = useState(null)
   const [dragOver, setDragOver] = useState(false)
@@ -102,6 +103,28 @@ export default function Challenge() {
   const [resultUrl, setResultUrl] = useState(null)
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining())
   const fileInputRef = useRef(null)
+
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false)
+  const [upgradeFeature, setUpgradeFeature] = useState('Download Limit Reached')
+
+  const handleStandardDownload = () => {
+    if (userPlan === 'Starter' && downloadsCount >= 2) {
+      setUpgradeFeature('Download Limit Reached')
+      setShowUpgradeModal(true)
+      return
+    }
+    if (userPlan === 'Starter') incrementDownloads()
+    downloadImage(resultUrl, generateFilename(`challenge-${challenge.id}`))
+  }
+
+  const handleHDDownload = () => {
+    if (userPlan === 'Starter') {
+      setUpgradeFeature('High-Quality Downloads')
+      setShowUpgradeModal(true)
+      return
+    }
+    downloadImage(resultUrl, generateFilename(`challenge-${challenge.id}_HD`))
+  }
 
   // Update countdown every second
   React.useEffect(() => {
@@ -360,16 +383,24 @@ export default function Challenge() {
                   <img src={resultUrl} alt="Challenge Result" className="w-full object-cover" />
                 </div>
 
-                <div className="flex gap-4">
-                  <button
-                    onClick={() => downloadImage(resultUrl, generateFilename(`challenge-${challenge.id}`))}
-                    className="flex-1 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-lg shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all hover:scale-[1.02]"
-                  >
-                    ⬇ Download HD
-                  </button>
+                <div className="flex flex-col gap-3 w-full">
+                  <div className="flex gap-4">
+                    <button
+                      onClick={handleStandardDownload}
+                      className="flex-1 py-4 rounded-xl border border-white/20 hover:bg-white/10 text-white font-bold text-lg transition-all active:scale-[0.98]"
+                    >
+                      ⬇ Download Standard
+                    </button>
+                    <button
+                      onClick={handleHDDownload}
+                      className="flex-1 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-lg shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all hover:scale-[1.02] flex justify-center items-center gap-2"
+                    >
+                      ⬇ Download HD {userPlan === 'Starter' && '🔒'}
+                    </button>
+                  </div>
                   <button
                     onClick={() => { setResultUrl(null); setUserPhotoUrl(null) }}
-                    className="px-6 py-4 rounded-xl border border-white/10 hover:bg-white/5 transition font-semibold"
+                    className="w-full py-4 rounded-xl border border-white/10 hover:bg-white/5 transition font-semibold"
                   >
                     Try Again
                   </button>
@@ -402,6 +433,12 @@ export default function Challenge() {
           </div>
         </div>
       </div>
+
+      <UpgradeModal 
+        isOpen={showUpgradeModal} 
+        onClose={() => setShowUpgradeModal(false)} 
+        feature={upgradeFeature}
+      />
     </div>
   )
 }

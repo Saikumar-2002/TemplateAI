@@ -8,12 +8,15 @@ import { compositeImage, PROCESSING_STAGES } from '../services/compositeEngine'
 import { downloadImage, generateFilename } from '../utils/downloadUtils'
 import ImageEditor from '../components/ImageEditor'
 import { motion, AnimatePresence } from 'framer-motion'
+import UpgradeModal from '../components/UpgradeModal'
 
 export default function TemplateDetail() {
   const { id } = useParams()
   const t = templates.find(x => String(x.id) === String(id)) || templates[0]
   const navigate = useNavigate()
-  const { addHistory, isFavorite, toggleFavorite } = useApp()
+  const { addHistory, isFavorite, toggleFavorite, userPlan, downloadsCount, incrementDownloads } = useApp()
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false)
+  const [upgradeFeature, setUpgradeFeature] = useState('Download Limit Reached')
 
   const [selectedOptions, setSelectedOptions] = useState(() => {
     const init = {}
@@ -100,6 +103,25 @@ export default function TemplateDetail() {
     } finally {
       setIsGenerating(false)
     }
+  }
+
+  const handleStandardDownload = () => {
+    if (userPlan === 'Starter' && downloadsCount >= 2) {
+      setUpgradeFeature('Download Limit Reached')
+      setShowUpgradeModal(true)
+      return
+    }
+    if (userPlan === 'Starter') incrementDownloads()
+    downloadImage(resultUrl, generateFilename(t.title))
+  }
+
+  const handleHDDownload = () => {
+    if (userPlan === 'Starter') {
+      setUpgradeFeature('High-Quality Downloads')
+      setShowUpgradeModal(true)
+      return
+    }
+    downloadImage(resultUrl, generateFilename(t.title + '_HD'))
   }
 
   return (
@@ -202,20 +224,28 @@ export default function TemplateDetail() {
                </div>
             </div>
             
-            <div className="flex gap-4">
-               <button 
-                  onClick={() => downloadImage(resultUrl, generateFilename(t.title))}
-                  className="flex-1 py-5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-xl shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all hover:scale-[1.02] active:scale-[0.98]"
-               >
-                 ⬇ Download Ultra HD
-               </button>
+             <div className="flex flex-col gap-3">
+               <div className="flex gap-4">
+                 <button 
+                    onClick={handleStandardDownload}
+                    className="flex-1 py-4 rounded-xl border border-white/20 hover:bg-white/10 text-white font-bold text-lg transition-all active:scale-[0.98]"
+                 >
+                   ⬇ Download Standard
+                 </button>
+                 <button 
+                    onClick={handleHDDownload}
+                    className="flex-1 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-lg shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+                 >
+                   ⬇ Download HD {userPlan === 'Starter' && '🔒'}
+                 </button>
+               </div>
                <button 
                   onClick={() => navigate('/dashboard')}
-                  className="px-8 py-5 rounded-xl border border-white/10 hover:bg-white/5 transition font-semibold text-lg"
+                  className="w-full py-4 rounded-xl border border-white/10 hover:bg-white/5 transition font-semibold text-lg"
                >
                  Go to Dashboard
                </button>
-            </div>
+             </div>
           </div>
         )}
       </div>
@@ -299,6 +329,12 @@ export default function TemplateDetail() {
           </div>
         </div>
       )}
+
+      <UpgradeModal 
+        isOpen={showUpgradeModal} 
+        onClose={() => setShowUpgradeModal(false)} 
+        feature={upgradeFeature}
+      />
     </div>
   )
 }

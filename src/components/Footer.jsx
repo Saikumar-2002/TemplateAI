@@ -20,7 +20,7 @@ export default function Footer() {
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition text-lg">in</a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4 text-gray-200">Product</h4>
             <ul className="space-y-3 text-sm text-gray-400">
@@ -50,11 +50,11 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
           <div>© {new Date().getFullYear()} TemplateAI Inc. All rights reserved.</div>
           <div className="flex gap-4">
-            <span>Built with ♥ for Creators</span>
+            <span>Made with ❤️ by SKY</span>
           </div>
         </div>
       </div>

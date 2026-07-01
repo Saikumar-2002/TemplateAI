@@ -1,12 +1,37 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { downloadImage, generateFilename } from '../utils/downloadUtils'
+import { useApp } from '../context/AppContext'
+import UpgradeModal from '../components/UpgradeModal'
+import { useState } from 'react'
 
 export default function Generate() {
   const { state } = useLocation()
   const navigate = useNavigate()
   const resultUrl = state?.result
   const template = state?.template
+  const { userPlan, downloadsCount, incrementDownloads } = useApp()
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false)
+  const [upgradeFeature, setUpgradeFeature] = useState('Download Limit Reached')
+
+  const handleStandardDownload = () => {
+    if (userPlan === 'Starter' && downloadsCount >= 2) {
+      setUpgradeFeature('Download Limit Reached')
+      setShowUpgradeModal(true)
+      return
+    }
+    if (userPlan === 'Starter') incrementDownloads()
+    downloadImage(resultUrl, generateFilename(template?.title))
+  }
+
+  const handleHDDownload = () => {
+    if (userPlan === 'Starter') {
+      setUpgradeFeature('High-Quality Downloads')
+      setShowUpgradeModal(true)
+      return
+    }
+    downloadImage(resultUrl, generateFilename(template?.title + '_HD'))
+  }
 
   if (!resultUrl) {
     return (
@@ -44,10 +69,10 @@ export default function Generate() {
            <img src={resultUrl} alt="Generated AI Image" className="w-full rounded-xl object-cover" />
            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
               <button 
-                onClick={() => downloadImage(resultUrl, generateFilename(template?.title))}
+                onClick={handleHDDownload}
                 className="px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-white font-bold rounded-xl shadow-xl transform hover:scale-105 transition flex items-center gap-2"
               >
-                <span>⬇</span> Download HD
+                <span>⬇</span> Download HD {userPlan === 'Starter' && '🔒'}
               </button>
            </div>
         </div>
@@ -57,10 +82,16 @@ export default function Generate() {
            <div className="rounded-2xl glass p-6 border border-white/10">
               <h3 className="text-xl font-bold mb-4">Actions</h3>
               <button 
-                onClick={() => downloadImage(resultUrl, generateFilename(template?.title))}
+                onClick={handleStandardDownload}
+                className="w-full py-4 mb-3 rounded-xl border border-emerald-500/50 hover:bg-emerald-500/10 text-emerald-400 font-bold shadow-lg transition hover:scale-[1.02]"
+              >
+                Download Standard
+              </button>
+              <button 
+                onClick={handleHDDownload}
                 className="w-full py-4 mb-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold shadow-lg hover:shadow-emerald-500/30 transition hover:scale-[1.02]"
               >
-                Download Image
+                Download HD {userPlan === 'Starter' && '🔒'}
               </button>
               <button 
                 onClick={() => navigate('/history')}
@@ -100,6 +131,12 @@ export default function Generate() {
         </div>
 
       </div>
+
+      <UpgradeModal 
+        isOpen={showUpgradeModal} 
+        onClose={() => setShowUpgradeModal(false)} 
+        feature={upgradeFeature}
+      />
     </div>
   )
 }
