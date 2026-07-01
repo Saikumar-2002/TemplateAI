@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const FAQS = [
   {
@@ -41,7 +42,7 @@ export default function FAQ() {
         <div className="space-y-4">
           {FAQS.map((faq, idx) => (
             <div key={idx} className="glass rounded-2xl border border-white/10 overflow-hidden transition-all duration-300">
-              <button 
+              <button
                 onClick={() => setOpen(open === idx ? -1 : idx)}
                 className={`w-full px-8 py-6 flex justify-between items-center transition-colors ${open === idx ? 'bg-white/5' : 'hover:bg-white/5'}`}
               >
@@ -50,7 +51,7 @@ export default function FAQ() {
                   +
                 </span>
               </button>
-              <div 
+              <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${open === idx ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
               >
                 <div className="px-8 pb-6 text-gray-300 leading-relaxed border-t border-white/5 pt-4">
@@ -60,13 +61,13 @@ export default function FAQ() {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-12 text-center p-8 glass rounded-2xl border border-white/10">
           <h3 className="text-xl font-bold mb-2">Still have questions?</h3>
           <p className="text-gray-400 mb-6">Our team is ready to help you with any issues.</p>
-          <a href="/contact" className="inline-block px-6 py-3 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition">
+          <Link to="/contact" className="inline-block px-6 py-3 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition">
             Contact Support
-          </a>
+          </Link>
         </div>
       </div>
     </section>
