@@ -34,7 +34,7 @@ export async function compositeImage({
   }, 1000)
 
   try {
-      debugger
+     
 
     const response = await fetch('/api/generate', {
       method: 'POST',
