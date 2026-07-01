@@ -121,7 +121,7 @@ function drawWatermark(ctx, w, h, text) {
 
 // ─── Main Compositing Function ──────────────────────────────────────
 export async function compositeImage({
-  userImageSrc,
+  userImageSrcs = [],
   templateImageSrc,
   template,
   selectedOptions = {},
@@ -135,26 +135,31 @@ export async function compositeImage({
   // Stage 1: Load images
   onProgress(0, PROCESSING_STAGES[0].label)
   
-  let userImg, templateImg
+  let userImgs = [], templateImg
   try {
-    // Try loading both, but template image may fail (cross-origin)
-    const results = await Promise.allSettled([
-      loadImage(userImageSrc),
-      loadImage(templateImageSrc),
-    ])
-    userImg = results[0].status === 'fulfilled' ? results[0].value : null
-    templateImg = results[1].status === 'fulfilled' ? results[1].value : null
+    const imgPromises = userImageSrcs.map(src => loadImage(src))
+    imgPromises.push(loadImage(templateImageSrc))
+    
+    const results = await Promise.allSettled(imgPromises)
+    
+    // The last result is the template image
+    const templateResult = results.pop()
+    templateImg = templateResult.status === 'fulfilled' ? templateResult.value : null
+    
+    // The rest are user images
+    userImgs = results.map(r => r.status === 'fulfilled' ? r.value : null).filter(Boolean)
   } catch {
     // fallback
   }
 
-  if (!userImg) throw new Error('Could not load your photo.')
+  if (userImgs.length === 0) throw new Error('Could not load your photo(s).')
 
   await delay(PROCESSING_STAGES[0].duration)
   onProgress(20, PROCESSING_STAGES[1].label)
 
   // Stage 2: Setup canvas
-  const aspectRatio = userImg.height / userImg.width
+  // Use the first image to determine aspect ratio for the canvas
+  const aspectRatio = userImgs[0].height / userImgs[0].width
   const finalHeight = Math.round(finalWidth * Math.max(aspectRatio, 1.2))
 
   const canvas = document.createElement('canvas')
@@ -165,18 +170,60 @@ export async function compositeImage({
   await delay(PROCESSING_STAGES[1].duration)
   onProgress(40, PROCESSING_STAGES[2].label)
 
-  // Stage 3: Draw user image as base, scaled to fill
-  const userAspect = userImg.width / userImg.height
-  const canvasAspect = finalWidth / finalHeight
-  let sx = 0, sy = 0, sw = userImg.width, sh = userImg.height
-  if (userAspect > canvasAspect) {
-    sw = userImg.height * canvasAspect
-    sx = (userImg.width - sw) / 2
-  } else {
-    sh = userImg.width / canvasAspect
-    sy = (userImg.height - sh) / 2
+  // Stage 3: Draw user images as base
+  if (userImgs.length === 1) {
+    const userImg = userImgs[0]
+    const userAspect = userImg.width / userImg.height
+    const canvasAspect = finalWidth / finalHeight
+    let sx = 0, sy = 0, sw = userImg.width, sh = userImg.height
+    if (userAspect > canvasAspect) {
+      sw = userImg.height * canvasAspect
+      sx = (userImg.width - sw) / 2
+    } else {
+      sh = userImg.width / canvasAspect
+      sy = (userImg.height - sh) / 2
+    }
+    ctx.drawImage(userImg, sx, sy, sw, sh, 0, 0, finalWidth, finalHeight)
+  } else if (userImgs.length >= 2) {
+    // Draw two images side-by-side
+    const halfWidth = finalWidth / 2
+    
+    // Left Image
+    const img1 = userImgs[0]
+    const asp1 = img1.width / img1.height
+    const targetAsp1 = halfWidth / finalHeight
+    let sx1 = 0, sy1 = 0, sw1 = img1.width, sh1 = img1.height
+    if (asp1 > targetAsp1) {
+      sw1 = img1.height * targetAsp1
+      sx1 = (img1.width - sw1) / 2
+    } else {
+      sh1 = img1.width / targetAsp1
+      sy1 = (img1.height - sh1) / 2
+    }
+    ctx.drawImage(img1, sx1, sy1, sw1, sh1, 0, 0, halfWidth, finalHeight)
+    
+    // Right Image
+    const img2 = userImgs[1]
+    const asp2 = img2.width / img2.height
+    const targetAsp2 = halfWidth / finalHeight
+    let sx2 = 0, sy2 = 0, sw2 = img2.width, sh2 = img2.height
+    if (asp2 > targetAsp2) {
+      sw2 = img2.height * targetAsp2
+      sx2 = (img2.width - sw2) / 2
+    } else {
+      sh2 = img2.width / targetAsp2
+      sy2 = (img2.height - sh2) / 2
+    }
+    ctx.drawImage(img2, sx2, sy2, sw2, sh2, halfWidth, 0, halfWidth, finalHeight)
+    
+    // Draw a subtle blend line in the middle
+    const grad = ctx.createLinearGradient(halfWidth - 20, 0, halfWidth + 20, 0)
+    grad.addColorStop(0, 'transparent')
+    grad.addColorStop(0.5, 'rgba(0,0,0,0.5)')
+    grad.addColorStop(1, 'transparent')
+    ctx.fillStyle = grad
+    ctx.fillRect(halfWidth - 20, 0, 40, finalHeight)
   }
-  ctx.drawImage(userImg, sx, sy, sw, sh, 0, 0, finalWidth, finalHeight)
 
   await delay(PROCESSING_STAGES[2].duration)
   onProgress(60, PROCESSING_STAGES[3].label)

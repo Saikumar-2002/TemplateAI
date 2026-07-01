@@ -12,8 +12,7 @@ const STEPS = ['preview', 'upload', 'processing', 'result']
 
 export default function TemplateModal({ template, open, onClose }) {
   const [step, setStep] = useState('preview')
-  const [userPhoto, setUserPhoto] = useState(null)
-  const [userPhotoUrl, setUserPhotoUrl] = useState(null)
+  const [userPhotos, setUserPhotos] = useState([])
   const [selectedOptions, setSelectedOptions] = useState(() => {
     const init = {}
     ;(template?.options || []).forEach(o => (init[o.name] = o.values[0]))
@@ -39,23 +38,31 @@ export default function TemplateModal({ template, open, onClose }) {
   useEffect(() => {
     if (template) {
       const opts = Object.entries(selectedOptions).map(([k,v]) => `${k}: ${v}`).join(', ')
-      setActivePrompt(`Masterpiece portrait, highly detailed, ${template.category}, style of ${template.title}, tags: ${template.tags?.join(', ')}. Customization: ${opts}. Use uploaded subject face maintaining exact likeness, realistic lighting, 8k resolution.`)
+      // Start with the new dynamic base prompt, or fallback if it doesn't exist
+      let prompt = template.basePrompt || `Masterpiece portrait, highly detailed, ${template.category}, style of ${template.title}, tags: ${template.tags?.join(', ')}. `
+      prompt += `Customization: ${opts}. Use uploaded subject face maintaining exact likeness, realistic lighting, 8k resolution.`
+      setActivePrompt(prompt)
     }
   }, [template, selectedOptions])
 
-  const handleFile = useCallback((file) => {
+  const handleFile = useCallback((file, index = 0) => {
     if (!file) return
-    setUserPhoto(file)
     const reader = new FileReader()
-    reader.onload = () => setUserPhotoUrl(reader.result)
+    reader.onload = () => {
+      setUserPhotos(prev => {
+        const newArr = [...prev]
+        newArr[index] = { file, url: reader.result }
+        return newArr
+      })
+    }
     reader.readAsDataURL(file)
   }, [])
 
-  const handleDrop = useCallback((e) => {
+  const handleDrop = useCallback((e, index = 0) => {
     e.preventDefault()
     setDragOver(false)
     const file = e.dataTransfer?.files?.[0]
-    if (file && file.type.startsWith('image/')) handleFile(file)
+    if (file && file.type.startsWith('image/')) handleFile(file, index)
   }, [handleFile])
 
   const handleGenerate = useCallback(async () => {
@@ -65,14 +72,20 @@ export default function TemplateModal({ template, open, onClose }) {
       return
     }
     
-    if (!userPhotoUrl) return
+    // Check if we have enough photos
+    const reqPhotos = template.requiredPhotos || 1
+    if (userPhotos.length < reqPhotos || userPhotos.some(p => !p)) {
+      alert(`Please upload all ${reqPhotos} required photo(s).`)
+      return
+    }
+
     setStep('processing')
     setProgress(0)
     setProgressLabel(PROCESSING_STAGES[0].label)
 
     try {
       const result = await compositeImage({
-        userImageSrc: userPhotoUrl,
+        userImageSrcs: userPhotos.map(p => p.url),
         templateImageSrc: template.preview,
         template,
         selectedOptions,
@@ -95,7 +108,7 @@ export default function TemplateModal({ template, open, onClose }) {
       alert('Generation failed: ' + err.message)
       setStep('upload')
     }
-  }, [userPhotoUrl, template, selectedOptions, addHistory])
+  }, [userPhotos, template, selectedOptions, addHistory])
 
   const handleStandardDownload = useCallback(() => {
     if (!resultUrl) return
@@ -120,8 +133,7 @@ export default function TemplateModal({ template, open, onClose }) {
 
   const resetModal = useCallback(() => {
     setStep('preview')
-    setUserPhoto(null)
-    setUserPhotoUrl(null)
+    setUserPhotos([])
     setResultUrl(null)
     setProgress(0)
   }, [])
@@ -290,75 +302,73 @@ export default function TemplateModal({ template, open, onClose }) {
             {step === 'upload' && (
               <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-6">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold">Upload Your Photo</h3>
+                  <h3 className="text-2xl font-bold">Upload Your Photo{template.requiredPhotos > 1 ? 's' : ''}</h3>
                   <p className="text-gray-400 mt-2">
                     For the AI to perfectly map your face to the trend, use a clear forward-facing selfie.
+                    {template.requiredPhotos === 2 && " This template requires two subjects (e.g., Bride and Groom)."}
                   </p>
                 </div>
 
-                {!userPhotoUrl ? (
-                  <div
-                    className={`border-2 border-dashed rounded-3xl p-16 text-center transition-all cursor-pointer ${
-                      dragOver
-                        ? 'border-violet-500 bg-violet-500/10 scale-[1.02]'
-                        : 'border-white/10 hover:border-white/20 hover:bg-white/5'
-                    }`}
-                    onClick={() => fileInputRef.current?.click()}
-                    onDragOver={(e) => { e.preventDefault(); setDragOver(true) }}
-                    onDragLeave={() => setDragOver(false)}
-                    onDrop={handleDrop}
-                  >
-                    <div className="text-6xl mb-6">📸</div>
-                    <div className="text-xl font-bold">Drag & Drop your photo here</div>
-                    <div className="text-gray-400 mt-2">or click to browse from your device</div>
-                    <div className="text-xs text-gray-500 mt-4 uppercase tracking-wider font-semibold">JPG, PNG • Max 10MB</div>
-                    <input
-                      ref={fileInputRef}
-                      type="file"
-                      accept="image/*"
-                      className="hidden"
-                      onChange={(e) => handleFile(e.target.files?.[0])}
-                    />
-                  </div>
-                ) : (
-                  <div className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="relative rounded-2xl overflow-hidden border border-white/10">
-                        <img src={userPhotoUrl} alt="Your photo" className="w-full h-80 object-cover" />
-                        <div className="absolute top-3 left-3 px-3 py-1.5 rounded-lg bg-black/80 text-xs font-semibold backdrop-blur-md border border-white/10">Your Photo</div>
+                <div className={`grid gap-6 ${template.requiredPhotos === 2 ? 'md:grid-cols-2' : ''}`}>
+                  {Array.from({ length: template.requiredPhotos || 1 }).map((_, i) => {
+                    const photo = userPhotos[i]
+                    return (
+                      <div key={i} className="flex-1">
+                        {!photo ? (
+                          <div
+                            className={`h-full border-2 border-dashed rounded-3xl p-12 text-center transition-all cursor-pointer flex flex-col items-center justify-center ${
+                              dragOver
+                                ? 'border-violet-500 bg-violet-500/10 scale-[1.02]'
+                                : 'border-white/10 hover:border-white/20 hover:bg-white/5'
+                            }`}
+                            onClick={() => {
+                              // We need a unique ref for each input, but for simplicity we can just find it
+                              document.getElementById(`file-upload-${i}`)?.click()
+                            }}
+                            onDragOver={(e) => { e.preventDefault(); setDragOver(true) }}
+                            onDragLeave={() => setDragOver(false)}
+                            onDrop={(e) => handleDrop(e, i)}
+                          >
+                            <div className="text-4xl mb-4">📸</div>
+                            <div className="text-lg font-bold">
+                              {template.requiredPhotos === 2 ? `Upload Person ${i + 1}` : 'Drag & Drop'}
+                            </div>
+                            <div className="text-gray-400 text-sm mt-2">or click to browse</div>
+                            <input
+                              id={`file-upload-${i}`}
+                              type="file"
+                              accept="image/*"
+                              className="hidden"
+                              onChange={(e) => handleFile(e.target.files?.[0], i)}
+                            />
+                          </div>
+                        ) : (
+                          <div className="space-y-4">
+                            <div className="relative rounded-2xl overflow-hidden border border-white/10 h-64">
+                              <img src={photo.url} alt={`Subject ${i + 1}`} className="w-full h-full object-cover" />
+                              <div className="absolute top-3 left-3 px-3 py-1.5 rounded-lg bg-black/80 text-xs font-semibold backdrop-blur-md border border-white/10">
+                                {template.requiredPhotos === 2 ? `Person ${i + 1}` : 'Your Photo'}
+                              </div>
+                            </div>
+                            <div className="flex justify-center">
+                              <label className="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 font-semibold text-sm cursor-pointer transition">
+                                Replace Photo
+                                <input
+                                  type="file"
+                                  accept="image/*"
+                                  className="hidden"
+                                  onChange={(e) => handleFile(e.target.files?.[0], i)}
+                                />
+                              </label>
+                            </div>
+                          </div>
+                        )}
                       </div>
-                      <div className="relative rounded-2xl overflow-hidden border border-white/10 opacity-70">
-                        <img
-                          src={template.preview}
-                          alt={template.title}
-                          className="w-full h-80 object-cover"
-                          onError={(e) => { e.target.src = `https://picsum.photos/seed/${template.id}/600/800` }}
-                        />
-                        <div className="absolute top-3 left-3 px-3 py-1.5 rounded-lg bg-black/80 text-xs font-semibold backdrop-blur-md border border-white/10">Target Style</div>
-                      </div>
-                    </div>
+                    )
+                  })}
+                </div>
 
-                    <div className="flex gap-4 justify-center">
-                      <label className="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 font-semibold cursor-pointer transition">
-                        Replace Photo
-                        <input
-                          type="file"
-                          accept="image/*"
-                          className="hidden"
-                          onChange={(e) => handleFile(e.target.files?.[0])}
-                        />
-                      </label>
-                      <button
-                        onClick={() => setEditing(true)}
-                        className="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 font-semibold transition"
-                      >
-                        ✂ Crop Image
-                      </button>
-                    </div>
-                  </div>
-                )}
-
-                <div className="flex gap-4 pt-4 border-t border-white/5">
+                <div className="flex gap-4 pt-4 border-t border-white/5 mt-8">
                   <button
                     onClick={() => setStep('preview')}
                     className="px-8 py-4 rounded-xl border border-white/10 font-semibold hover:bg-white/5 transition"
@@ -367,9 +377,9 @@ export default function TemplateModal({ template, open, onClose }) {
                   </button>
                   <button
                     onClick={handleGenerate}
-                    disabled={!userPhotoUrl}
+                    disabled={userPhotos.length < (template.requiredPhotos || 1) || userPhotos.some(p => !p)}
                     className={`flex-1 py-4 rounded-xl font-bold text-lg transition-all ${
-                      userPhotoUrl
+                      userPhotos.length >= (template.requiredPhotos || 1) && !userPhotos.some(p => !p)
                         ? 'bg-gradient-to-r from-violet-600 to-indigo-500 text-white shadow-[0_0_20px_rgba(124,77,255,0.3)] hover:shadow-[0_0_30px_rgba(124,77,255,0.5)] hover:scale-[1.01]'
                         : 'bg-gray-800 text-gray-500 cursor-not-allowed border border-white/5'
                     }`}
@@ -378,14 +388,21 @@ export default function TemplateModal({ template, open, onClose }) {
                   </button>
                 </div>
 
-                {/* Edit Modal */}
-                {editing && userPhotoUrl && (
+                {/* Edit Modal (Crop) - Simplified to just handle the first photo for now if editing is needed */}
+                {editing && userPhotos[0] && (
                   <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4">
                     <div className="bg-[#0d0d14] rounded-3xl p-6 w-full max-w-3xl border border-white/10 shadow-2xl">
                       <h3 className="text-xl font-bold mb-4">Crop Photo</h3>
                       <ImageEditor
-                        imageSrc={userPhotoUrl}
-                        onComplete={(d) => { setUserPhotoUrl(d); setEditing(false) }}
+                        imageSrc={userPhotos[0].url}
+                        onComplete={(d) => {
+                          setUserPhotos(prev => {
+                            const arr = [...prev]
+                            arr[0] = { ...arr[0], url: d }
+                            return arr
+                          })
+                          setEditing(false)
+                        }}
                         onCancel={() => setEditing(false)}
                       />
                     </div>
