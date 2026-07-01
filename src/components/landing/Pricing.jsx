@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { useApp } from '../../context/AppContext'
 import { useAuth } from '../../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
-
-const BACKEND_URL = 'http://localhost:4000'
+import { API_BASE } from '../../services/api'
 
 const PLANS = [
   {
@@ -92,7 +91,7 @@ export default function Pricing() {
 
     try {
       // Step 1: Create order on backend
-      const orderRes = await fetch(`${BACKEND_URL}/api/payment/create-order`, {
+      const orderRes = await fetch(`${API_BASE}/api/payment/create-order`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ planName: plan.name }),
@@ -124,7 +123,7 @@ export default function Pricing() {
         handler: async function (response) {
           // Step 3: Verify payment on backend
           try {
-            const verifyRes = await fetch(`${BACKEND_URL}/api/payment/verify`, {
+            const verifyRes = await fetch(`${API_BASE}/api/payment/verify`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
